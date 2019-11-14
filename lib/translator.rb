@@ -1,11 +1,34 @@
-# require modules here
-
-def load_library
-  # code goes here
+require 'yaml'
+require 'pry'
+def load_library(filepath)
+  translator = YAML.load_file(filepath)
+  meaning = {get_meaning: {},  get_emoticon: {}}
+  translator.each do |key, value|
+    #binding.pry
+    meaning[:get_meaning][value[1]] = key
+    meaning[:get_emoticon][value[0]] = value[1]
+      #binding.pry
+  end
+  meaning
 end
 
-def get_japanese_emoticon
-  # code goes here
+def get_japanese_emoticon(filepath, get_emoticon)
+  load_library(filepath)
+  translator = YAML.load_file(filepath)
+  meaning = {get_meaning: {},  get_emoticon: {}}
+  translator.each do |key, value|
+    #binding.pry
+    meaning[:get_meaning][value[1]] = key
+    meaning[:get_emoticon][value[0]] = value[1]
+    i = 0
+    while i < get_emoticon.length do
+      if(:get_emoticon[i] == "=D" || :get_emoticon[i] == ":)" || :get_emoticon[i] == ":'(")
+        return meaning[:get_emoticon][value[1]]
+    end
+    i += 1
+  end
+  return "Sorry, that translation was not found"
+end
 end
 
 def get_english_meaning

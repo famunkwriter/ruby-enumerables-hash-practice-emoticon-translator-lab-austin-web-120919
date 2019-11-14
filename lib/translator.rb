@@ -17,7 +17,7 @@ def get_japanese_emoticon(filepath, get_emoticon)
   translator = YAML.load_file(filepath)
   meaning = {get_meaning: {},  get_emoticon: {}}
   translator.each do |key, value|
-    
+
     meaning[:get_meaning][value[1]] = key
     meaning[:get_emoticon][value[0]] = value[1]
     i = 0
@@ -25,7 +25,7 @@ def get_japanese_emoticon(filepath, get_emoticon)
       if(:get_emoticon[i] == "=D" || :get_emoticon[i] == ":)" || :get_emoticon[i] == ":'(")
         :get_emoticon[value[0]] = value[1]
         binding.pry
-        return 
+        return
     end
     i += 1
   end

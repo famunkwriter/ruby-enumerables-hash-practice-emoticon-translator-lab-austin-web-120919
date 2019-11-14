@@ -23,7 +23,7 @@ def get_japanese_emoticon(filepath, get_emoticon)
     i = 0
     while i < translator.length do
       if(:get_emoticon[i] == "=D" || :get_emoticon[i] == ":)" || :get_emoticon[i] == ":'(")
-        :get_emoticon[value[1]
+        :get_emoticon[value[1]]
     end
     i += 1
   end

@@ -21,7 +21,7 @@ def get_japanese_emoticon(filepath, get_emoticon)
     meaning[:get_meaning][value[1]] = key
     meaning[:get_emoticon][value[0]] = value[1]
     i = 0
-    while i < translator.each do
+    while i < translator.length do
       if(:get_emoticon[i] == "=D" || :get_emoticon[i] == ":)" || :get_emoticon[i] == ":'(")
         return[:get_emoticon][value[0]] = value[1]
       else

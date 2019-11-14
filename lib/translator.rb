@@ -13,7 +13,7 @@ def load_library(filepath)
 end
 
 
-def get_japanese_emoticon(filepath, get_emoticon)
+def get_japanese_emoticon(filepath, emoticon)
   translator = load_library(filepath)
   meaning = {get_meaning: {},  get_emoticon: {}}
   translator.each do |key, value|
@@ -23,7 +23,7 @@ def get_japanese_emoticon(filepath, get_emoticon)
     i = 0
     while i < translator.length do
       if(:get_emoticon[i] == "=D" || :get_emoticon[i] == ":)" || :get_emoticon[i] == ":'(")
-        :get_emoticon[value[0]] = value[1]
+        :get_emoticon
 
         return
     end

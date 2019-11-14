@@ -27,7 +27,8 @@ def get_japanese_emoticon(filepath, get_emoticon)
     end
     i += 1
   end
-  return "Sorry, that translation was not found"
+else
+   return "Sorry, that translation was not found"
 end
 end
 

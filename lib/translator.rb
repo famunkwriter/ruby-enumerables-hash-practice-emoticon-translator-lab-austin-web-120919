@@ -25,7 +25,7 @@ def get_japanese_emoticon(filepath, get_emoticon)
       if(:get_emoticon[i] == "=D" || :get_emoticon[i] == ":)" || :get_emoticon[i] == ":'(")
         :get_emoticon[value[1]
       else
-        return "Sorry that translation wasn't found"
+        return "Sorry that emoticon wasn't found"
     end
     i += 1
   end

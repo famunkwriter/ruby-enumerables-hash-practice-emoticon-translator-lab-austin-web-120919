@@ -21,6 +21,7 @@ def get_japanese_emoticon(filepath, emoticon)
   else
     "Sorry no translation available"
 end
+end
 
 def get_english_meaning
   # code goes here
